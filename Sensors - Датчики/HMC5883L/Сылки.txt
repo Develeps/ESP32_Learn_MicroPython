@@ -1,0 +1,3 @@
+https://github.com/gvalkov/micropython-esp8266-hmc5883l
+
+Это магнитометр - Компас

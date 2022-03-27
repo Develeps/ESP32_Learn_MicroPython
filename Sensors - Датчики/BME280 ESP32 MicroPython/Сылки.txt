@@ -1,1 +1,0 @@
-https://randomnerdtutorials.com/micropython-bme280-esp32-esp8266/

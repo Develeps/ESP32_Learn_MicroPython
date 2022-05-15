@@ -23,7 +23,7 @@ if usys.platform == "pyboard":
 elif usys.platform == "esp8266":  # Hardware SPI
     cfg = {"spi": 1, "miso": 12, "mosi": 13, "sck": 14, "csn": 4, "ce": 5}
 elif usys.platform == "esp32":  # Software SPI
-    cfg = {"spi": -1, "miso": 32, "mosi": 33, "sck": 25, "csn": 26, "ce": 27}
+    cfg = {"spi": -1, "miso": 32, "mosi": 14, "sck": 32, "csn": 27, "ce": 12}
 else:
     raise ValueError("Unsupported platform {}".format(usys.platform))
 

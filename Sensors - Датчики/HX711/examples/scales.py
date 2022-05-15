@@ -37,8 +37,11 @@ scales.tare()
     
 while True:
     try:
-        val = scales.stable_value(reads=10)
-        print(val)
+        val = scales.stable_value(reads=3)
+        if val < 0:
+            print("gram: ",0)
+        else:  
+            print("gram: ",val * 0.00283)
     except Exception:
         print(0)
 scales.power_off()

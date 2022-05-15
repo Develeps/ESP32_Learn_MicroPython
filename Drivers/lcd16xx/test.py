@@ -1,11 +1,19 @@
 from time import sleep_ms, ticks_ms
 from machine import I2C, Pin
 from esp8266_i2c_lcd import I2cLcd
+import time
 
-i2c = I2C(scl=Pin(14), sda=Pin(12), freq=400000)
 
+i2c = I2C(scl=Pin(5), sda=Pin(4), freq=400000)
+
+s = ""
 lcd = I2cLcd(i2c, 0x27, 2, 16)
-lcd.putstr("Hello ernitron\nIt's working!")
-
 lcd.show_cursor()
 lcd.blink_cursor_on()
+    
+for i in "Hello Word\nIt's working!":
+    s = s + i
+    print(s)
+    lcd.putstr(s)
+    time.sleep(0.5)
+    lcd.clear()
